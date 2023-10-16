@@ -2,6 +2,7 @@ import 'package:dfa_media/data/models/models.dart';
 import 'package:dfa_media/ui/features/lockers/lockers_screen_wm.dart';
 import 'package:dfa_media/ui/features/lockers/widgets/locker_widget.dart';
 import 'package:dfa_media/ui/features/lockers/widgets/states/locker_screen_error.dart';
+import 'package:dfa_media/ui/features/lockers/widgets/states/locker_screen_loading.dart';
 import 'package:dfa_media/ui/widgets/buttons/widgets/app_button.dart';
 import 'package:dfa_media/utils/elementary/state_notifier_builder.dart';
 import 'package:elementary/elementary.dart';
@@ -46,6 +47,20 @@ class LockersScreenWidget extends ElementaryWidget<ILockersScreenWidgetModel> {
           EntityStateNotifierBuilder<List<LockerModel>>(
             errorBuilder: (context, e, data) => SliverToBoxAdapter(child: LockerScreenError(refresh: wm.refresh)),
             listenableEntityState: wm.lockerListenable,
+            loadingBuilder: (context, data) => SliverToBoxAdapter(
+              child: Column(
+                children: List.generate(
+                  5,
+                  (index) => const Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 24,
+                      vertical: 8,
+                    ),
+                    child: LockerLoadingScreen(),
+                  ),
+                ),
+              ),
+            ),
             builder: (context, List<LockerModel>? lockers) {
               if (lockers == null) return SliverToBoxAdapter(child: LockerScreenError(refresh: wm.refresh));
               return SliverList.separated(
