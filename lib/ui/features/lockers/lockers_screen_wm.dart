@@ -41,7 +41,6 @@ class LockersScreenWidgetModel extends WidgetModel<LockersScreenWidget, LockersS
 
   Future<void> _loadLockers() async {
     _lockerEnity.loading();
-    await Future.delayed(const Duration(seconds: 2));
     final res = await model.getLockers();
     if (res == null) return _lockerEnity.error();
     return _lockerEnity.content(res);

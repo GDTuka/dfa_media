@@ -7,7 +7,8 @@ enum SystemIcons {
   leave,
   logo,
   friends,
-  profile;
+  profile,
+  logoText;
 
   SvgPicture getSvg({Color? color}) {
     switch (this) {
@@ -44,6 +45,13 @@ enum SystemIcons {
             ? SvgPicture.asset('assets/icons/system/profile.svg')
             : SvgPicture.asset(
                 'assets/icons/system/profile.svg',
+                colorFilter: ColorFilter.mode(color, BlendMode.srcIn),
+              );
+      case SystemIcons.logoText:
+        return color == null
+            ? SvgPicture.asset('assets/icons/system/logo_with_text.svg')
+            : SvgPicture.asset(
+                'assets/icons/system/logo_with_text.svg',
                 colorFilter: ColorFilter.mode(color, BlendMode.srcIn),
               );
     }

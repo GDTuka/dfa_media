@@ -45,7 +45,7 @@ class _AppBottomBarState extends State<AppBottomBar> {
               child: Container(
                 color: Colors.transparent,
                 child: SystemIcons.logo.getSvg(
-                  color: currentPage == BottomNavBarPage.lockers ? theme.main.primary : theme.bg.secondary,
+                  color: currentPage == BottomNavBarPage.lockers ? theme.main.primary : theme.bg.tetryary,
                 ),
               ),
             ),
@@ -58,7 +58,7 @@ class _AppBottomBarState extends State<AppBottomBar> {
               child: Container(
                 color: Colors.transparent,
                 child: SystemIcons.friends.getSvg(
-                  color: currentPage == BottomNavBarPage.friends ? theme.main.primary : theme.bg.secondary,
+                  color: currentPage == BottomNavBarPage.friends ? theme.main.primary : theme.bg.tetryary,
                 ),
               ),
             ),
@@ -71,7 +71,7 @@ class _AppBottomBarState extends State<AppBottomBar> {
               child: Container(
                 color: Colors.transparent,
                 child: SystemIcons.profile.getSvg(
-                  color: currentPage == BottomNavBarPage.profile ? theme.main.primary : theme.bg.secondary,
+                  color: currentPage == BottomNavBarPage.profile ? theme.main.primary : theme.bg.tetryary,
                 ),
               ),
             ),
