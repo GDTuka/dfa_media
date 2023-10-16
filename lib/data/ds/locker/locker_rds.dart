@@ -7,5 +7,5 @@ part 'locker_rds.chopper.dart';
 abstract class LockerRDS extends ChopperService {
   static LockerRDS create([ChopperClient? client]) => _$LockerRDS(client);
   @Get(path: '/db')
-  Future<Response<List<Locker>>> getLockers();
+  Future<Response<UserModel>> getLockers();
 }

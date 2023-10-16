@@ -5,8 +5,8 @@ class LockerRepository {
   LockerRepository(this._lockerRDS);
   final LockerRDS _lockerRDS;
 
-  Future<List<Locker>?> getLockers() async {
+  Future<List<LockerModel>?> getLockers() async {
     final res = await _lockerRDS.getLockers();
-    return res.body;
+    return res.body?.lockers;
   }
 }

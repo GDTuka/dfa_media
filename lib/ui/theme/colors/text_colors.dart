@@ -13,9 +13,9 @@ class TextColors {
   Color secondary;
   Color tetryary;
   factory TextColors.light() => TextColors(
-        primary: const Color(0xFF051A15),
+        primary: const Color(0xFFFFFFFF),
         red: Colors.red,
-        secondary: const Color(0xFF233833),
+        secondary: const Color(0xFF051A15),
         tetryary: Colors.black,
       );
 }

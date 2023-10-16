@@ -7,5 +7,6 @@ import 'package:dart_mappable/dart_mappable.dart';
 import 'models.dart' as p0;
 
 final datamodelsContainer = MapperContainer(linked: {
-  p0.LockerMapper.container,
+  p0.LockerModelMapper.container,
+  p0.UserModelMapper.container,
 });

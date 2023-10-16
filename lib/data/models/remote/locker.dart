@@ -1,8 +1,8 @@
 part of '../models.dart';
 
-@MappableClass()
-class Locker {
-  Locker({
+@MappableClass(caseStyle: CaseStyle.snakeCase)
+class LockerModel with LockerModelMappable {
+  LockerModel({
     required this.code,
     required this.id,
     required this.isLock,

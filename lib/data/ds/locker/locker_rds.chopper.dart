@@ -17,13 +17,13 @@ final class _$LockerRDS extends LockerRDS {
   final definitionType = LockerRDS;
 
   @override
-  Future<Response<List<Locker>>> getLockers() {
+  Future<Response<UserModel>> getLockers() {
     final Uri $url = Uri.parse('ozon671game/demo/db');
     final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,
     );
-    return client.send<List<Locker>, Locker>($request);
+    return client.send<UserModel, UserModel>($request);
   }
 }

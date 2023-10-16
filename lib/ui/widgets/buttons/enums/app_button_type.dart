@@ -1,0 +1,4 @@
+enum AppButtonType {
+  primary,
+  secondary;
+}
