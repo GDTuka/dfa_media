@@ -9,7 +9,7 @@ enum SystemIcons {
   friends,
   profile;
 
-  SvgPicture getSvg(Color? color) {
+  SvgPicture getSvg({Color? color}) {
     switch (this) {
       case SystemIcons.lock:
         return color == null

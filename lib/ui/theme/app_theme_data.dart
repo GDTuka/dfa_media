@@ -93,7 +93,7 @@ class AppThemeData {
 
   TextStyle get s2 => create(
         fontSize: 13,
-        figmaHeight: 9,
+        figmaHeight: 15,
         fontWeight: FontWeight.w700,
       );
 

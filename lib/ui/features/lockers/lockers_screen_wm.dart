@@ -12,7 +12,7 @@ abstract interface class ILockersScreenWidgetModel implements IWidgetModel {
 
   AppThemeData get theme;
   Future<void> refresh();
-  Future<void> onSwitchTap();
+  Future<void> onSwitchTap(bool val, int index);
 }
 
 LockersScreenWidgetModel defaultLockersScreenWidgetModelFactory(BuildContext context) {
@@ -47,9 +47,11 @@ class LockersScreenWidgetModel extends WidgetModel<LockersScreenWidget, LockersS
   }
 
   @override
-  Future<void> onSwitchTap() async {
-    // TODO: implement onSwitchTap
-    throw UnimplementedError();
+  Future<void> onSwitchTap(bool val, int index) async {
+    final lockers = _lockerEnity.value?.data;
+    if (lockers == null) return;
+    lockers[index].isLock = val;
+    _lockerEnity.content(lockers);
   }
 
   @override
