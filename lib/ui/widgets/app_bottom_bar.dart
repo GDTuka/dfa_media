@@ -1,5 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:dfa_media/data/local/enums/bottom_nav_bar_pages.dart';
+import 'package:dfa_media/ui/icons/stystem_icons.dart';
+import 'package:dfa_media/ui/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 class AppBottomBar extends StatefulWidget {
@@ -24,6 +26,7 @@ class _AppBottomBarState extends State<AppBottomBar> {
 
   @override
   Widget build(BuildContext context) {
+    final theme = AppTheme.of(context);
     return Container(
       decoration: const BoxDecoration(
         color: Colors.white,
@@ -41,9 +44,8 @@ class _AppBottomBarState extends State<AppBottomBar> {
               },
               child: Container(
                 color: Colors.transparent,
-                child: Icon(
-                  Icons.event,
-                  color: currentPage == BottomNavBarPage.lockers ? Colors.blueAccent : Colors.black,
+                child: SystemIcons.logo.getSvg(
+                  currentPage == BottomNavBarPage.lockers ? theme.main.primary : theme.bg.secondary,
                 ),
               ),
             ),
@@ -55,9 +57,8 @@ class _AppBottomBarState extends State<AppBottomBar> {
               },
               child: Container(
                 color: Colors.transparent,
-                child: Icon(
-                  Icons.work,
-                  color: currentPage == BottomNavBarPage.friends ? Colors.blueAccent : Colors.black,
+                child: SystemIcons.friends.getSvg(
+                  currentPage == BottomNavBarPage.friends ? theme.main.primary : theme.bg.secondary,
                 ),
               ),
             ),
@@ -69,9 +70,8 @@ class _AppBottomBarState extends State<AppBottomBar> {
               },
               child: Container(
                 color: Colors.transparent,
-                child: Icon(
-                  Icons.person,
-                  color: currentPage == BottomNavBarPage.profile ? Colors.blueAccent : Colors.black,
+                child: SystemIcons.profile.getSvg(
+                  currentPage == BottomNavBarPage.profile ? theme.main.primary : theme.bg.secondary,
                 ),
               ),
             ),
