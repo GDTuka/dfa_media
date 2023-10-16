@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:dfa_media/data/local/enums/bottom_nav_bar_pages.dart';
+import 'package:dfa_media/data/models/local/enums/bottom_nav_bar_pages.dart';
 import 'package:dfa_media/ui/icons/stystem_icons.dart';
 import 'package:dfa_media/ui/theme/theme.dart';
 import 'package:flutter/material.dart';

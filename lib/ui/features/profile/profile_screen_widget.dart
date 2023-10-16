@@ -9,6 +9,10 @@ class ProfileScreenWidget extends ElementaryWidget<IProfileScreenWidgetModel> {
 
   @override
   Widget build(IProfileScreenWidgetModel wm) {
-    return Container();
+    return const Scaffold(
+      body: Center(
+        child: Text('Profile Screen'),
+      ),
+    );
   }
 }

@@ -8,9 +8,9 @@ enum BottomNavBarPage {
       case BottomNavBarPage.lockers:
         return 0;
       case BottomNavBarPage.friends:
-        return 2;
-      case BottomNavBarPage.profile:
         return 1;
+      case BottomNavBarPage.profile:
+        return 2;
     }
   }
 }

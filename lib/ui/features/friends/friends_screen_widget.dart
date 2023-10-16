@@ -9,6 +9,8 @@ class FriendsScreenWidget extends ElementaryWidget<IFriendsScreenWidgetModel> {
 
   @override
   Widget build(IFriendsScreenWidgetModel wm) {
-    return Container();
+    return const Center(
+      child: Text('Friends screen'),
+    );
   }
 }
