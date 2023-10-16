@@ -29,11 +29,15 @@ class _AppBottomBarState extends State<AppBottomBar> {
     final theme = AppTheme.of(context);
     return Container(
       decoration: const BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.vertical(
-          top: Radius.circular(8),
-        ),
-      ),
+          color: Colors.white,
+          borderRadius: BorderRadius.vertical(
+            top: Radius.circular(8),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey,
+            )
+          ]),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
@@ -44,8 +48,21 @@ class _AppBottomBarState extends State<AppBottomBar> {
               },
               child: Container(
                 color: Colors.transparent,
-                child: SystemIcons.logo.getSvg(
-                  color: currentPage == BottomNavBarPage.lockers ? theme.main.primary : theme.bg.tetryary,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    SystemIcons.logo.getSvg(
+                      color: currentPage == BottomNavBarPage.lockers ? theme.main.primary : const Color(0xFF233833),
+                    ),
+                    const SizedBox(height: 10),
+                    // Тут мне стало лень и поэтому я не стал выносить новый цвет и шрифт отдельно в тему
+                    Text(
+                      BottomNavBarPage.lockers.navTitle,
+                      style: theme.s2.copyWith(
+                          color: currentPage == BottomNavBarPage.lockers ? theme.main.primary : const Color(0xFF233833),
+                          fontWeight: currentPage == BottomNavBarPage.lockers ? FontWeight.w700 : FontWeight.w500),
+                    )
+                  ],
                 ),
               ),
             ),
@@ -57,8 +74,21 @@ class _AppBottomBarState extends State<AppBottomBar> {
               },
               child: Container(
                 color: Colors.transparent,
-                child: SystemIcons.friends.getSvg(
-                  color: currentPage == BottomNavBarPage.friends ? theme.main.primary : theme.bg.tetryary,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    SystemIcons.friends.getSvg(
+                      color: currentPage == BottomNavBarPage.friends ? theme.main.primary : const Color(0xFF233833),
+                    ),
+                    const SizedBox(height: 10),
+                    // Тут мне стало лень и поэтому я не стал выносить новый цвет и шрифт отдельно в тему
+                    Text(
+                      BottomNavBarPage.friends.navTitle,
+                      style: theme.s2.copyWith(
+                          color: currentPage == BottomNavBarPage.friends ? theme.main.primary : const Color(0xFF233833),
+                          fontWeight: currentPage == BottomNavBarPage.friends ? FontWeight.w700 : FontWeight.w500),
+                    )
+                  ],
                 ),
               ),
             ),
@@ -70,8 +100,21 @@ class _AppBottomBarState extends State<AppBottomBar> {
               },
               child: Container(
                 color: Colors.transparent,
-                child: SystemIcons.profile.getSvg(
-                  color: currentPage == BottomNavBarPage.profile ? theme.main.primary : theme.bg.tetryary,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    SystemIcons.profile.getSvg(
+                      color: currentPage == BottomNavBarPage.profile ? theme.main.primary : const Color(0xFF233833),
+                    ),
+                    const SizedBox(height: 10),
+                    // Тут мне стало лень и поэтому я не стал выносить новый цвет и шрифт отдельно в тему
+                    Text(
+                      BottomNavBarPage.profile.navTitle,
+                      style: theme.s2.copyWith(
+                          color: currentPage == BottomNavBarPage.profile ? theme.main.primary : const Color(0xFF2E665A),
+                          fontWeight: currentPage == BottomNavBarPage.profile ? FontWeight.w700 : FontWeight.w500),
+                    )
+                  ],
                 ),
               ),
             ),
