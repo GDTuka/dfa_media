@@ -6,6 +6,7 @@ import 'package:dfa_media/navigation/app_router.dart';
 import 'package:dfa_media/ui/theme/theme.dart';
 import 'package:dfa_media/utils/interceptors/json_mappable_convertor.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 class GlobalDependency extends AppAsyncDependency {
   final theme = AppThemeData.light();
@@ -22,6 +23,7 @@ class GlobalDependency extends AppAsyncDependency {
     );
     _lockerRDS = LockerRDS.create(chopperClient);
     lockerRepository = LockerRepository(_lockerRDS);
+    FlutterNativeSplash.remove();
   }
 }
 

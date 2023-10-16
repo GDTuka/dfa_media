@@ -20,6 +20,7 @@ dependencies:
   shimmer: ^3.0.0
   elementary: ^3.0.0
   chopper: ^7.0.8
+  flutter_native_splash: ^2.3.4
 
   cupertino_icons: ^1.0.2
   flutter_svg: ^2.0.7
@@ -42,4 +43,11 @@ flutter:
     - assets/
     - assets/icons/
     - assets/icons/system/
+    - assets/logo/
+
+flutter_native_splash:
+  color: "154036"
+  image: "assets/logo/app_logo.png"
+  background_image: "assets/logo/splash_bg.png"
+
 

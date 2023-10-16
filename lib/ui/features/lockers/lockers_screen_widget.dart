@@ -120,7 +120,7 @@ class LockersScreenWidget extends ElementaryWidget<ILockersScreenWidgetModel> {
                       children: [
                         SizedBox(
                           child: AppButton.primary(
-                            onPressed: wm.refresh,
+                            onPressed: () {},
                             horizontalPadding: 14,
                             child: const Text(
                               '+ Add locker',
