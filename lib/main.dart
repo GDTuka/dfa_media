@@ -6,7 +6,11 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() {
   print('12344');
-  print('12341234231');
+  print('12');
+  print('12344');
+  print('12');
+  print('12344');
+  print('12');
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   runApp(
